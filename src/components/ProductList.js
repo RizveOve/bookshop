@@ -3,17 +3,23 @@ import { useEffect, useState } from "react";
 
 export const ProductList = () => {
     const [products, setProducts] = useState([]);
+    const [url, setUrl] = useState("http://localhost:8000/products");
 
     console.log(products)
 
     useEffect(() => {
-        fetch("http://localhost:8000/products")
+        fetch(url)
         .then(response => response.json())
         .then(data => setProducts(data));
-    }, []);
+    }, [url]);
 
   return (
     <div>
+         <div className="filter">
+            <button onClick={() => setUrl("http://localhost:8000/products")}>All</button>
+            <button onClick={() => setUrl("http://localhost:8000/products?in_stock=true")}>In Stock Only</button>
+            <button onClick={() => setUrl("http://localhost:8000/products?in_stock=false")}>Out of Stock</button>
+        </div>
         {products.map((product)=> (
             <div key={product.id} className="card">
                 <p className="id">{product.id}</p>

@@ -4,6 +4,12 @@
   padding: 0px 15px;
 }
 
+.filter {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 h1 {
   text-align: center;
   margin: 30px auto;

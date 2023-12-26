@@ -10,7 +10,7 @@
       "id": 10002,
       "name": "Django Framework for Beginners",
       "price": 49,
-      "in_stock": true
+      "in_stock": false
     },
     {
       "id": 10003,
@@ -22,7 +22,7 @@
       "id": 10004,
       "name": "Build a Blockchain from Scratch in Go",
       "price": 19,
-      "in_stock": false
+      "in_stock": true
     },
     {
       "id": 10005,
